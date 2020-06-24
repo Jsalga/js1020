@@ -1,0 +1,16 @@
+# This code is written in Python, and the function's name is initials, 
+# returns the first initial of a phrase text in a string in upper case letters.
+
+def initials(phrase):
+    words = phrase.upper() #Assigned phrase to words in all upper case letters. 
+    result = "" #here created a empty string variable, result to add the first initial character of a text in a string variable. 
+    words = words.split() #Used the split method which takes a string variable and splits by the default of white space and create a list of strings. 
+    for word in words: #We then iterate through our list of strings which is our variable named words. 
+        for words1 in words: #For each word (words1) in the words variable we add the first index of a word (words1) to our variable name result and continue until all word in the words variable are iterated.
+            result += words1[0:1]
+        break #once all the words in the words variable are iterated we break from the first loop in line 8 and return the result variable. 
+    return result
+
+print(initials("Lake Shore Drive")) # Should be: LSD
+print(initials("Return On Investment")) # Should be: ROI
+print(initials("Operating system")) # Should be: OS
